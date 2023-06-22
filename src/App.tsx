@@ -1,24 +1,31 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Person, HairColor } from './components/Person';
+
 
 function App() {
+
+  // create variable in typescript
+  // in JS: const name = "Jun"
+  // in Typescript:
+  // const name: string = "Jun"
+  // const age: number = 19
+  // const isMarried: boolean = false
+  // how a function is created
+  // name is a number but we are returning a number or if you are not returning
+  // anything do void or just don't put anythign there
+  // const getName = (name: string): number => {
+  //   if (name === "Jun"){
+  //     return 19
+  //   }
+  //   else{
+  //     return 0
+  //   }
+  // }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Person name='Jun' age={19} email='jun@gmail.com' hairColor={HairColor.Blonde}/>
     </div>
   );
 }
